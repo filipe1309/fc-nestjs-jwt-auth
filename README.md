@@ -33,6 +33,8 @@ git clone git@github.com:filipe1309/fc-nestjs-jwt-auth.git
 cd fc-nestjs-jwt-auth
 ```
 
+Set `.env` file, based on `.env.example` file.
+
 ## :runner: Running
 
 ```sh
