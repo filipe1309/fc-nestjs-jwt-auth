@@ -54,3 +54,5 @@ npm i types/passport @types/passport-jwt --save-dev
 npm i @nestjs/jwt --save
 
 nest g service auth/jwt-strategy
+
+nest g guard auth/role   

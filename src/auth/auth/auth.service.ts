@@ -38,7 +38,7 @@ export class AuthService {
             (u) => u.username === username && bcrypt.compareSync(password, u.password),
         );
         if (!user) {
-            return null;
+            throw new Error('Username or password is incorrect');
         }
         return user;
     }
