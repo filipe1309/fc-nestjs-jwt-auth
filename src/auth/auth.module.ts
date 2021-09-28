@@ -9,13 +9,12 @@ import { jwtConstants } from './constants';
 @Module({
   imports: [
     ConfigModule,
-    JwtModule
-      .register({
-        secret: jwtConstants.secret,
-        signOptions: { expiresIn: jwtConstants.expiration },
-      }),
+    JwtModule.register({
+      secret: jwtConstants.secret,
+      signOptions: { expiresIn: jwtConstants.expiration },
+    }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategyService]
+  providers: [AuthService, JwtStrategyService],
 })
-export class AuthModule { }
+export class AuthModule {}
