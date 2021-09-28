@@ -46,4 +46,11 @@ npm i bcrypt --save
 
  ./node_modules/.bin/ts-node jwt.ts 
 
-npm i base64-url --save   
+npm i base64-url --save
+
+npm i @nestjs/passport --save
+npm i passport passport-jwt --save
+npm i types/passport @types/passport-jwt --save-dev
+npm i @nestjs/jwt --save
+
+nest g service auth/jwt-strategy

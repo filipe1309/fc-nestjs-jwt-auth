@@ -1,15 +1,17 @@
 import { Injectable } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
+import * as bcrypt from 'bcrypt';
 
 const users = [
     {
         id: 1,
-        username: 'admin',
+        username: 'admin@admin.com',
         password: '$2b$10$hAXI2WHntBBnPdvwmdGJFO9Wqwjc0LHxPv4S67mmCFhu8qzuautKW',
         role: 'admin',
     },
     {
         id: 2,
-        username: 'user',
+        username: 'user@user.com',
         password: '$2b$10$hAXI2WHntBBnPdvwmdGJFO9Wqwjc0LHxPv4S67mmCFhu8qzuautKW',
         role: 'user',
     },
@@ -18,17 +20,25 @@ const users = [
 @Injectable()
 export class AuthService {
 
+    constructor(private jwtService: JwtService) { }
+
     login(username: string, password: string) {
-        console.log(username, password);
+        const user = this.validateCredentials(username, password);
+        const payload = {
+            sub: user.id,
+            username: user.username,
+        };
+
+        return this.jwtService.sign(payload);
     }
 
-    // async validateUser(username: string, password: string): Promise<any> {
-    //     const user = users.find(
-    //         (u) => u.username === username && u.password === password,
-    //     );
-    //     if (!user) {
-    //         return null;
-    //     }
-    //     return user;
-    // }
+    validateCredentials(username: string, password: string) {
+        const user = users.find(
+            (u) => u.username === username && bcrypt.compareSync(password, u.password),
+        );
+        if (!user) {
+            return null;
+        }
+        return user;
+    }
 }
