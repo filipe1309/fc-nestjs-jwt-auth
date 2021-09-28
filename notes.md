@@ -36,3 +36,7 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+
+nest g module auth
+nest g controller auth/login

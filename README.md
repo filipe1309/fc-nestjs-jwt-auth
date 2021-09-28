@@ -39,7 +39,7 @@ cd fc-nestjs-jwt-auth
 docker-compose up
 ```
 
-> Access http://localhost
+> Access http://localhost:3000
 
 <!-- ## :white_check_mark: Tests
 
