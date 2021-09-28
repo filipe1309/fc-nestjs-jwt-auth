@@ -10,9 +10,19 @@ Content-Type: application/json
     "password": "123456"
 }
 
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "user@user.com",
+    "password": "123456"
+}
+
 
 ###
 
 GET http://localhost:3000/test-auth
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjMyNzk4NDU5LCJleHAiOjE2MzI3OTg1MTl9.EvS_7RCrTnM7AjsJi6WuRQGWq5CwLBPZRcgGDWmZWBQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjMyNzk5MjM2LCJleHAiOjE2MzI3OTkyOTZ9.F6R_PZ5WUEkSK0uratJalm4daWzyPJUkXzYUDqdWZNY
 
