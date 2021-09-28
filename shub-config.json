@@ -1,0 +1,14 @@
+{
+    "version": "0.20.2",
+    "username": "Filipe Leuch Bonfim",
+    "github_username": "filipe1309",
+    "project_name": "JWT Auth with Nest.js",
+    "project_repo_name": "fc-nestjs-jwt-auth",
+    "project_repo_link": "https://github.com/filipe1309/fc-nestjs-jwt-auth.git",
+    "course_source": "FullCycle",
+    "course_name": "Autenticação JWT com Nest.js",
+    "course_link": "https://www.youtube.com/watch?v=SinonmkxRSI",
+    "course_type": "video",
+    "course_multiple": "false",
+    "vcs": "false"
+}
