@@ -2,18 +2,23 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 
+enum Roles {
+    ADMIN = 'admin',
+    USER = 'user',
+}
+
 const users = [
     {
         id: 1,
         username: 'admin@admin.com',
         password: '$2b$10$hAXI2WHntBBnPdvwmdGJFO9Wqwjc0LHxPv4S67mmCFhu8qzuautKW',
-        role: 'admin',
+        role: Roles.ADMIN,
     },
     {
         id: 2,
         username: 'user@user.com',
         password: '$2b$10$hAXI2WHntBBnPdvwmdGJFO9Wqwjc0LHxPv4S67mmCFhu8qzuautKW',
-        role: 'user',
+        role: Roles.USER,
     },
 ];
 
