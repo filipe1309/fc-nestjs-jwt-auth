@@ -39,4 +39,7 @@ $ npm run test:cov
 
 
 nest g module auth
-nest g controller auth/login
+nest g controller auth/auth
+nest g service auth/auth
+
+npm i bcrypt --save
