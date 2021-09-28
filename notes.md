@@ -43,3 +43,7 @@ nest g controller auth/auth
 nest g service auth/auth
 
 npm i bcrypt --save
+
+ ./node_modules/.bin/ts-node jwt.ts 
+
+npm i base64-url --save   
